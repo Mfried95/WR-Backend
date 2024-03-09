@@ -1,8 +1,7 @@
-// models/reviews.js
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.js'; // Adjust the import path as needed
 
-const reviews = sequelize.define('reviews', {
+const rev = sequelize.define('rev', {
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
@@ -29,4 +28,4 @@ const reviews = sequelize.define('reviews', {
   freezeTableName: true
 });
 
-export default reviews;
+export default rev;

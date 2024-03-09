@@ -1,6 +1,6 @@
 // app.js
 import express from 'express';
-import sequelize from './config/database.js';
+import sequelize from "./config/database.js";
 import Review from './models/reviews.js'; // Ensure the path is correct
 
 const app = express();
@@ -11,7 +11,7 @@ app.use(express.json());
 // Connect to server and database
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
-  sequelize.sync({ force: false })
+  sequelize.sync({ force: true })
     .then(() => {
       console.log('Database synced');
     })
@@ -21,7 +21,7 @@ app.listen(port, () => {
 });
 
 
-// ROUTES
+// ROUTESv
 app.get('/', async (req, res) => {
   res.send('Hello World');
 });
